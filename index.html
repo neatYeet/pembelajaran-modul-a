@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualisasi Optimalisasi Tata Letak Kargo</title>
+    <!-- Menghubungkan file CSS untuk styling halaman -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Konten utama aplikasi, berisi kontainer truk dan tombol kontrol -->
+    <div class="main-content">
+        <!-- Kontainer utama untuk visualisasi SVG truk -->
+        <div class="container">
+            <!-- Elemen SVG tempat paket-paket akan digambar -->
+            <svg id="truck-container" width="800" height="400"></svg>
+        </div>
+        <!-- Bagian kontrol dengan tombol untuk memulai penataan paket -->
+        <div class="controls">
+            <button id="start-packing-btn">Mulai Tata Letak</button>
+        </div>
+    </div>
+
+    <!-- Sidebar untuk interaksi pengguna: menambah dan melihat daftar paket -->
+    <div class="sidebar">
+        <h3>Tambah Paket Baru</h3>
+        <!-- Form untuk memasukkan detail paket baru secara manual -->
+        <form id="add-package-form">
+            <label for="package-width">Lebar:</label>
+            <input type="number" id="package-width" min="10" max="200" value="50" required><br>
+            <label for="package-height">Tinggi:</label>
+            <input type="number" id="package-height" min="10" max="200" value="50" required><br>
+            <label for="package-value">Nilai:</label>
+            <input type="number" id="package-value" min="1" value="10" required><br>
+            <label for="package-type">Tipe:</label>
+            <select id="package-type">
+                <option value="box">Kotak</option>
+                <option value="drum">Drum</option>
+                <option value="sack">Karung</option>
+            </select><br>
+            <button type="submit">Tambah Paket</button>
+        </form>
+
+        <h3>Daftar Paket</h3>
+        <!-- Daftar (unordered list) tempat paket-paket yang ditambahkan akan ditampilkan -->
+        <ul id="package-list">
+            <!-- Paket-paket akan dicantumkan di sini secara dinamis oleh JavaScript -->
+        </ul>
+        <!-- Tombol untuk menghapus semua paket dari daftar -->
+        <button id="clear-packages-btn">Bersihkan Daftar Paket</button>
+    </div>
+
+    <!-- Menghubungkan file JavaScript untuk logika aplikasi -->
+    <script src="script.js"></script>
+</body>
+
+</html>

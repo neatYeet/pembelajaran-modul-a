@@ -1,0 +1,41 @@
+<!--
+Ini adalah aset gambar SVG untuk merepresentasikan sebuah "Drum" (Drum Minyak) dalam visualisasi tata letak kargo.
+SVG (Scalable Vector Graphics) adalah format gambar berbasis XML untuk grafis 2D yang mendukung interaktivitas dan animasi.
+-->
+<svg width="100" height="80" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!--
+    Elemen <rect> menggambar badan utama drum.
+    - x, y, width, height: Posisi dan dimensi persegi panjang.
+    - rx: Radius sudut, memberikan bentuk membulat pada sudut persegi panjang.
+    - fill: Warna isi drum (#FFC107 adalah kuning keemasan).
+    - stroke: Warna garis tepi (#FFA000 adalah oranye).
+    - stroke-width: Ketebalan garis tepi.
+    -->
+    <rect x="10" y="10" width="80" height="60" rx="10" fill="#FFC107" stroke="#FFA000" stroke-width="2"/>
+    
+    <!--
+    Elemen <ellipse> menggambar bagian atas drum.
+    - cx, cy: Koordinat pusat elips.
+    - rx, ry: Radius horizontal dan vertikal elips.
+    - fill, stroke, stroke-width: Properti styling.
+    -->
+    <ellipse cx="50" cy="10" rx="40" ry="10" fill="#FFD54F" stroke="#FFA000" stroke-width="2"/>
+    
+    <!--
+    Elemen <ellipse> menggambar bagian bawah drum.
+    -->
+    <ellipse cx="50" cy="70" rx="40" ry="10" fill="#FFD54F" stroke="#FFA000" stroke-width="2"/>
+    
+    <!--
+    Elemen <path> menggambar garis vertikal di sisi drum, memberikan kesan 3D.
+    -->
+    <path d="M10 10V70M90 10V70" stroke="#FFA000" stroke-width="2"/>
+    
+    <!--
+    Elemen <text> menambahkan teks "DRUM" di tengah drum.
+    - x, y: Koordinat posisi teks.
+    - font-family, font-size, fill: Properti styling teks.
+    - text-anchor="middle": Menyebabkan teks dipusatkan secara horizontal pada koordinat x.
+    -->
+    <text x="50" y="45" font-family="Arial" font-size="20" fill="#FFFFFF" text-anchor="middle">DRUM</text>
+</svg>

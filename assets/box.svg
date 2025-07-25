@@ -1,0 +1,32 @@
+<!--
+Ini adalah aset gambar SVG untuk merepresentasikan sebuah "Kotak" (Box) dalam visualisasi tata letak kargo.
+SVG (Scalable Vector Graphics) adalah format gambar berbasis XML untuk grafis 2D yang mendukung interaktivitas dan animasi.
+-->
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!--
+    Elemen <rect> menggambar persegi panjang yang menjadi bentuk dasar kotak.
+    - x, y: Koordinat sudut kiri atas persegi panjang.
+    - width, height: Lebar dan tinggi persegi panjang.
+    - fill: Warna isi persegi (#D32F2F adalah merah tua).
+    - stroke: Warna garis tepi (#B71C1C adalah merah yang lebih gelap).
+    - stroke-width: Ketebalan garis tepi.
+    -->
+    <rect x="1" y="1" width="48" height="48" fill="#D32F2F" stroke="#B71C1C" stroke-width="2"/>
+    
+    <!--
+    Elemen <path> digunakan untuk menggambar garis-garis yang menyerupai pita atau pengikat pada kotak.
+    Atribut 'd' mendefinisikan jalur gambar menggunakan perintah-perintah seperti:
+    - M: Move To (pindah ke koordinat)
+    - L: Line To (gambar garis ke koordinat)
+    -->
+    <path d="M1 10L49 10M1 25L49 25M1 40L49 40" stroke="#B71C1C" stroke-width="1"/>
+    <path d="M10 1L10 49M25 1L25 49M40 1L40 49" stroke="#B71C1C" stroke-width="1"/>
+    
+    <!--
+    Elemen <text> menambahkan teks "BOX" di tengah kotak.
+    - x, y: Koordinat posisi teks.
+    - font-family, font-size, fill: Properti styling teks.
+    - text-anchor="middle": Menyebabkan teks dipusatkan secara horizontal pada koordinat x.
+    -->
+    <text x="25" y="30" font-family="Arial" font-size="12" fill="#FFFFFF" text-anchor="middle">BOX</text>
+</svg>

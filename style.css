@@ -1,0 +1,240 @@
+/* Styling dasar untuk seluruh halaman */
+body {
+    font-family: Arial, sans-serif;
+    /* Mengatur jenis font */
+    display: flex;
+    /* Menggunakan Flexbox untuk tata letak */
+    justify-content: center;
+    /* Pusatkan konten secara horizontal */
+    align-items: flex-start;
+    /* Sejajarkan item ke bagian atas */
+    margin-top: 20px;
+    /* Margin atas untuk memisahkan dari tepi atas browser */
+    background-color: #f0f0f0;
+    /* Warna latar belakang halaman */
+    min-height: 100vh;
+    /* Memastikan body mengambil seluruh tinggi viewport */
+}
+
+/* Styling untuk kontainer utama yang membungkus area visualisasi truk dan kontrol */
+.main-content {
+    display: flex;
+    /* Menggunakan Flexbox */
+    flex-direction: column;
+    /* Tata letak vertikal */
+    align-items: center;
+    /* Pusatkan item secara horizontal */
+    margin-right: 20px;
+    /* Jarak antara konten utama dan sidebar */
+}
+
+/* Styling untuk area kontainer truk */
+.container {
+    border: 2px solid #333;
+    /* Border solid abu-abu gelap */
+    background-color: #fff;
+    /* Latar belakang putih */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Bayangan kotak tipis */
+    margin-bottom: 20px;
+    /* Margin bawah */
+}
+
+/* Styling untuk elemen SVG yang merepresentasikan kontainer truk */
+#truck-container {
+    border: 1px dashed #ccc;
+    /* Border putus-putus abu-abu terang */
+}
+
+/* Styling untuk tombol kontrol */
+.controls button {
+    padding: 10px 20px;
+    /* Padding di dalam tombol */
+    font-size: 16px;
+    /* Ukuran font tombol */
+    background-color: #4CAF50;
+    /* Warna latar belakang hijau */
+    color: white;
+    /* Warna teks putih */
+    border: none;
+    /* Tanpa border */
+    border-radius: 5px;
+    /* Sudut tombol membulat */
+    cursor: pointer;
+    /* Kursor berubah menjadi pointer saat di atas tombol */
+    transition: background-color 0.3s ease;
+    /* Transisi halus untuk perubahan warna latar belakang */
+}
+
+/* Styling saat kursor di atas tombol kontrol */
+.controls button:hover {
+    background-color: #45a049;
+    /* Warna latar belakang sedikit lebih gelap saat hover */
+}
+
+/* Styling untuk sidebar */
+.sidebar {
+    width: 300px;
+    /* Lebar sidebar */
+    padding: 20px;
+    /* Padding di dalam sidebar */
+    background-color: #fff;
+    /* Latar belakang putih */
+    border: 2px solid #333;
+    /* Border solid abu-abu gelap */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Bayangan kotak tipis */
+    border-radius: 8px;
+    /* Sudut sidebar membulat */
+}
+
+/* Styling untuk judul di sidebar */
+.sidebar h3 {
+    margin-top: 0;
+    /* Hapus margin atas default */
+    color: #333;
+    /* Warna teks abu-abu gelap */
+}
+
+/* Styling untuk label form di sidebar */
+.sidebar form label {
+    display: block;
+    /* Membuat label menjadi blok elemen */
+    margin-bottom: 5px;
+    /* Margin bawah */
+    font-weight: bold;
+    /* Teks tebal */
+}
+
+/* Styling untuk input angka dan select di form sidebar */
+.sidebar form input[type="number"],
+.sidebar form select {
+    width: calc(100% - 12px);
+    /* Lebar input, dikurangi padding */
+    padding: 8px;
+    /* Padding di dalam input */
+    margin-bottom: 10px;
+    /* Margin bawah */
+    border: 1px solid #ccc;
+    /* Border tipis abu-abu */
+    border-radius: 4px;
+    /* Sudut input membulat */
+}
+
+/* Styling untuk tombol submit di form sidebar */
+.sidebar form button[type="submit"] {
+    width: 100%;
+    /* Lebar penuh */
+    padding: 10px;
+    /* Padding di dalam tombol */
+    background-color: #007bff;
+    /* Warna latar belakang biru */
+    color: white;
+    /* Warna teks putih */
+    border: none;
+    /* Tanpa border */
+    border-radius: 5px;
+    /* Sudut tombol membulat */
+    cursor: pointer;
+    /* Kursor berubah menjadi pointer */
+    transition: background-color 0.3s ease;
+    /* Transisi halus */
+}
+
+/* Styling saat kursor di atas tombol submit */
+.sidebar form button[type="submit"]:hover {
+    background-color: #0056b3;
+    /* Warna latar belakang sedikit lebih gelap saat hover */
+}
+
+/* Styling untuk daftar paket */
+#package-list {
+    list-style: none;
+    /* Hapus bullet point default */
+    padding: 0;
+    /* Hapus padding default */
+    margin-top: 15px;
+    /* Margin atas */
+    max-height: 300px;
+    /* Batasi tinggi untuk scroll jika banyak paket */
+    overflow-y: auto;
+    /* Aktifkan scroll vertikal jika konten melebihi tinggi */
+    border: 1px solid #eee;
+    /* Border tipis abu-abu sangat terang */
+    padding: 10px;
+    /* Padding di dalam daftar */
+    border-radius: 4px;
+    /* Sudut daftar membulat */
+}
+
+/* Styling untuk setiap item di daftar paket */
+#package-list li {
+    background-color: #f9f9f9;
+    /* Latar belakang abu-abu sangat terang */
+    margin-bottom: 5px;
+    /* Margin bawah antar item */
+    padding: 8px;
+    /* Padding di dalam item */
+    border: 1px solid #ddd;
+    /* Border tipis abu-abu terang */
+    border-radius: 4px;
+    /* Sudut item membulat */
+    display: flex;
+    /* Menggunakan Flexbox */
+    justify-content: space-between;
+    /* Sejajarkan item dengan spasi di antara mereka */
+    align-items: center;
+    /* Pusatkan item secara vertikal */
+}
+
+/* Styling untuk tombol hapus di setiap item paket */
+#package-list li .remove-btn {
+    background-color: #dc3545;
+    /* Warna latar belakang merah */
+    color: white;
+    /* Warna teks putih */
+    border: none;
+    /* Tanpa border */
+    border-radius: 4px;
+    /* Sudut tombol membulat */
+    padding: 4px 8px;
+    /* Padding di dalam tombol */
+    cursor: pointer;
+    /* Kursor berubah menjadi pointer */
+    font-size: 0.8em;
+    /* Ukuran font lebih kecil */
+}
+
+/* Styling saat kursor di atas tombol hapus */
+#package-list li .remove-btn:hover {
+    background-color: #c82333;
+    /* Warna latar belakang sedikit lebih gelap saat hover */
+}
+
+/* Styling untuk tombol "Bersihkan Daftar Paket" */
+#clear-packages-btn {
+    width: 100%;
+    /* Lebar penuh */
+    padding: 10px;
+    /* Padding di dalam tombol */
+    background-color: #6c757d;
+    /* Warna latar belakang abu-abu */
+    color: white;
+    /* Warna teks putih */
+    border: none;
+    /* Tanpa border */
+    border-radius: 5px;
+    /* Sudut tombol membulat */
+    cursor: pointer;
+    /* Kursor berubah menjadi pointer */
+    transition: background-color 0.3s ease;
+    /* Transisi halus */
+    margin-top: 10px;
+    /* Margin atas */
+}
+
+/* Styling saat kursor di atas tombol "Bersihkan Daftar Paket" */
+#clear-packages-btn:hover {
+    background-color: #5a6268;
+    /* Warna latar belakang sedikit lebih gelap saat hover */
+}

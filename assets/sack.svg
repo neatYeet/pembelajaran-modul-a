@@ -1,0 +1,32 @@
+<!--
+Ini adalah aset gambar SVG untuk merepresentasikan sebuah "Karung" (Sack) dalam visualisasi tata letak kargo.
+SVG (Scalable Vector Graphics) adalah format gambar berbasis XML untuk grafis 2D yang mendukung interaktivitas dan animasi.
+-->
+<svg width="70" height="30" viewBox="0 0 70 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!--
+    Elemen <path> menggambar bentuk dasar karung.
+    Atribut 'd' mendefinisikan jalur gambar menggunakan perintah-perintah seperti:
+    - M: Move To (pindah ke koordinat)
+    - C: Cubic Bezier Curve (menggambar kurva Bezier kubik)
+    - L: Line To (gambar garis ke koordinat)
+    - Z: Close Path (menutup jalur)
+    - fill: Warna isi karung (#6D4C41 adalah coklat).
+    - stroke: Warna garis tepi (#4E342E adalah coklat yang lebih gelap).
+    - stroke-width: Ketebalan garis tepi.
+    -->
+    <path d="M5 25 C5 10 65 10 65 25 L65 25 C65 30 5 30 5 25 Z" fill="#6D4C41" stroke="#4E342E" stroke-width="2"/>
+    
+    <!--
+    Elemen <path> ini menggambar garis putus-putus di bagian atas karung, menyerupai jahitan.
+    - stroke-dasharray="2 2": Membuat garis menjadi putus-putus dengan pola 2 unit garis, 2 unit spasi.
+    -->
+    <path d="M10 20 C10 10 60 10 60 20" stroke="#4E342E" stroke-width="2" stroke-dasharray="2 2"/>
+    
+    <!--
+    Elemen <text> menambahkan teks "SACK" di tengah karung.
+    - x, y: Koordinat posisi teks.
+    - font-family, font-size, fill: Properti styling teks.
+    - text-anchor="middle": Menyebabkan teks dipusatkan secara horizontal pada koordinat x.
+    -->
+    <text x="35" y="20" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">SACK</text>
+</svg>
